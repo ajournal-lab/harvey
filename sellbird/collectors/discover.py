@@ -1097,6 +1097,10 @@ class OpenStreetMap(DiscoveryProvider):
         # English terms for the AJournal Lab ICP (restaurants, gyms, real estate, clinics)
         "restaurant": ['amenity=restaurant'],
         "gym": ['leisure=fitness_centre'],
+        "cafe": ['amenity=cafe'],
+        "clothing": ['shop=clothes'],
+        "boutique": ['shop=boutique', 'shop=clothes'],
+        "fashion": ['shop=clothes'],
         "real estate": ['office=estate_agent'],
         "clinic": ['amenity=clinic', 'amenity=doctors'],
         "lawyer": ['office=lawyer'],
