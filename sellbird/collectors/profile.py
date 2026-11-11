@@ -102,6 +102,9 @@ GOOGLE_ADS = (r"googleadservices\.com", r"gtag/js\?id=AW-", r"google_conversion"
               r"googletagmanager\.com/gtag/js\?id=AW-")
 META_PIXEL = (r"connect\.facebook\.net/[^\"']*fbevents\.js", r"fbq\s*\(\s*['\"]init")
 
+# Social accounts linked from the homepage (Instagram, Facebook, TikTok, YouTube).
+SOCIAL_HINTS = (r"instagram\.com/", r"facebook\.com/", r"fb\.com/", r"tiktok\.com/",
+                r"youtube\.com/(@|c/|channel/|user/)")
 BOOKING_HINTS = (r"calendly\.com", r"acuityscheduling", r"schedulicity",
                  r"squareup\.com/appointments", r"setmore", r"book(ing)?[-_]?now",
                  r"schedule[-_]?(an?[-_])?(appointment|estimate|consultation)",
@@ -1174,6 +1177,7 @@ class ProfileCollector:
 
         # Booking gap
         add("NO_ONLINE_BOOKING", num=0 if self._any(home, BOOKING_HINTS) else 1)
+        add("NO_SOCIAL_LINKS", num=0 if self._any(home, SOCIAL_HINTS) else 1)
 
         # The About page, fetched once for the startup signals below.
         about_page: list[tuple[str, str]] = []

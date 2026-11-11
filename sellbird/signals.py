@@ -192,6 +192,16 @@ SIGNAL_CATALOG: list[dict] = [
         "confidence_floor": 0.0,
     },
     {
+        "code": "NO_SOCIAL_LINKS",
+        "label": "No social media links on the website",
+        "description": "The homepage links to no Instagram, Facebook, TikTok or YouTube account, so customers have no visible social presence. A clear social media management opening.",
+        "category": "profile",
+        "value_type": "bool",
+        "collector": "profile",
+        "cost_note": "free (homepage HTML)",
+        "confidence_floor": 0.0,
+    },
+    {
         "code": "NO_ONLINE_BOOKING",
         "label": "No online booking/scheduling",
         "description": "No booking or scheduling widget detected — leads have to phone in, so after-hours demand is lost.",
