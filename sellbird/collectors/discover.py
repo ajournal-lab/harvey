@@ -1094,6 +1094,11 @@ class OpenStreetMap(DiscoveryProvider):
         "hvac": ['craft=hvac'],
         "electric": ['craft=electrician'],
         "dentist": ['amenity=dentist'],
+        # English terms for the AJournal Lab ICP (restaurants, gyms, real estate, clinics)
+        "restaurant": ['amenity=restaurant'],
+        "gym": ['leisure=fitness_centre'],
+        "real estate": ['office=estate_agent'],
+        "clinic": ['amenity=clinic', 'amenity=doctors'],
         "lawyer": ['office=lawyer'],
         "attorney": ['office=lawyer'],
         "contractor": ['craft=builder', 'office=construction_company'],
